@@ -7,4 +7,4 @@ There are Seven section in this ZipgoIntracity Dashboard.
   Bookings
   Finance
   Configuration
-  Useres
+  Useres 
