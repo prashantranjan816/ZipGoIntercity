@@ -95,7 +95,7 @@ public class CreateTrip extends BasePage {
 		Date date = new Date();
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
-		cal.add(Calendar.DATE, 0);//insted of 0 we can use +-1 to indrease or decrease current date.
+		cal.add(Calendar.DATE, 0);//insted of 0 we can use +-1 to increase or decrease current date.
 		dateFinal = df.format(cal.getTime());
 		
 		

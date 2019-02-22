@@ -172,4 +172,11 @@ public class BasePage {
 	   element.click();
    }
    
+   
+   
+   public void closeBrowser() {
+	  
+	   driver.quit();
+   }
+   
 }

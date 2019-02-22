@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Zipgo.InterCity.base.CreateTrip">
+      <class name="Zipgo.InterCity.agents.CreateAgents">
         <methods>
-          <include name="sendMail"/>
-          <include name="CreateTestTrip"/>
+          <include name="createAgents"/>
+          <include name="loginIntercityDashboard"/>
         </methods>
-      </class> <!-- Zipgo.InterCity.base.CreateTrip -->
+      </class> <!-- Zipgo.InterCity.agents.CreateAgents -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
