@@ -1,0 +1,75 @@
+package Zipgo.InterCity;
+
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import Zipgo.InterCity.base.BasePage;
+import library.Utility;
+
+
+public class LoginPage extends BasePage{
+	
+	final static String FileLocation 			= "./src/main/resources/intercityDashBoard.properties";
+	final static String SelectURL 				= "BetaUrl";
+	final static By Login 						= By.linkText("Login");
+	final static By email 			 			= By.xpath("//input[@type='email']");
+	final static By password 			 		= By.xpath("//input[@type='password']");
+	final static By next 			 			= By.xpath("(//*[@class='RveJvd snByac'])[1]");
+	final By loginPassword 						= By.id("loginPassword");
+	final By signInButton 						= By.xpath("//input[@value='Sign in']");
+	final static String mailid 					= "prashant.ranjan@zipgo.in";
+	final static String mailpwd 				= "ZipgoMay@123";
+	static String dateFinal; 	
+	
+//	protected WebDriver driver;  // use WebDriver protected so all child class can use it by extends.
+	
+	
+	@BeforeClass()
+	public void loginIntercityDashboard() throws IOException, InterruptedException {
+
+		// --- ---- --- use Java calendar concept---------------------------
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		cal.add(Calendar.DATE, 0);// insted of 0 we can use +-1 to increase or decrease current date.
+		dateFinal = df.format(cal.getTime());
+		// ------------------------------------------------------------
+		
+		File src = new File(FileLocation);
+		FileInputStream fis = new FileInputStream(src);
+		Properties pro = new Properties();
+		pro.load(fis);
+		System.out.println("Property class loaded");
+		driver = new ChromeDriver();
+		driver.get(pro.getProperty(SelectURL));
+		Thread.sleep(3000);
+		driver.findElement(Login).click();
+
+		Thread.sleep(3000);
+		driver.findElement(email).sendKeys(mailid);
+		driver.findElement(next).click();
+		Thread.sleep(3000);
+		driver.findElement(password).sendKeys(mailpwd);
+		driver.findElement(next).click();
+		System.out.println("Login Successful");
+		Thread.sleep(3000);
+		Utility.getScreenshot(driver, dateFinal + "firstScreenShot");
+
+	}
+
+	
+	
+	
+}
