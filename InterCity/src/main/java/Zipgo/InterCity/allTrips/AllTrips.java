@@ -43,7 +43,7 @@ public class AllTrips extends LoginPage {
 		}
 
 		finally {
-			closeBrowser();
+//			closeBrowser();
 		}
 
 	}
