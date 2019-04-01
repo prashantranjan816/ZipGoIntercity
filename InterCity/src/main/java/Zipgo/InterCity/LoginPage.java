@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -54,17 +55,17 @@ public class LoginPage extends BasePage{
 		System.out.println("Property class loaded");
 		driver = new ChromeDriver();
 		driver.get(pro.getProperty(SelectURL));
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.findElement(Login).click();
 
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.findElement(email).sendKeys(mailid);
 		driver.findElement(next).click();
 		Thread.sleep(3000);
 		driver.findElement(password).sendKeys(mailpwd);
 		driver.findElement(next).click();
 		System.out.println("Login Successful");
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		Utility.getScreenshot(driver, dateFinal + "firstScreenShot");
 
 	}
