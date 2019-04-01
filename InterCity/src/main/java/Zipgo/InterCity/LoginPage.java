@@ -23,7 +23,7 @@ import library.Utility;
 public class LoginPage extends BasePage{
 	
 	final static String FileLocation 			= "./src/main/resources/intercityDashBoard.properties";
-	final static String ChromeFileLocation 		= "./src/main/resources/chromedriver";
+	final static String ChromeFileLocation 		= "./src/main/resources/chromedriver 3";
 	final static String SelectURL 				= "BetaUrl";
 	final static By Login 						= By.linkText("Login");
 	final static By email 			 			= By.xpath("//input[@type='email']");
@@ -55,8 +55,6 @@ public class LoginPage extends BasePage{
 		Properties pro = new Properties();
 		pro.load(fis);
 		System.out.println("Property class loaded");
-//		System.setProperty("webdriver.chrome.driver", Configurations.CHROME_DRIVER_EXE);
-		System.setProperty("webdriver.chrome.driver",ChromeFileLocation);
 		driver = new ChromeDriver();
 		driver.get(pro.getProperty(SelectURL));
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
