@@ -23,7 +23,7 @@ public class ExtentReportListener implements IReporter{
     private ExtentReports extent;
 
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
-        extent = new ExtentReports(outputDirectory + File.separator + "ExtendReport" + File.separator + "TripCreateExtendReport.html", true);
+        extent = new ExtentReports(outputDirectory + File.separator + "ExtendReport" + File.separator + "InterCityExtendReport.html", true);
        /* try {
             extent.loadConfig(new File(Res.getResource("extent-config.xml").toURI()));
         } catch (URISyntaxException e) {
