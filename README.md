@@ -12,12 +12,12 @@ This is repository of ZipgoIntracity project.
   
   
 ## How to use??
-### 1. Make sure in your system have install 
-### 2. Java JRE > 8
-### 3. Maven > 3
-### 4. ChromeDriver
-### 5. SelenoumServer
+#### 1. Make sure in your system have install 
+#### 2. Java JRE > 8
+#### 3. Maven > 3
+#### 4. ChromeDriver
+#### 5. SelenoumServer
 
 ## How to run this project??
-### 1. Clone this repo in local
-### 2. Go to terminal and pass command mvn clean install
+#### 1. Clone this repo in local
+#### 2. Go to terminal and pass command mvn clean install
