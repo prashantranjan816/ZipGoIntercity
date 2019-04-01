@@ -18,3 +18,5 @@ This is repository of ZipgoIntracity project.
 3.ChromeDriver
 4.SelenoumServer
 
+## How to ren this project??
+Go 
