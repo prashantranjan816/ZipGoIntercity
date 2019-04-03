@@ -29,7 +29,7 @@ public class Utility {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Screenshot Taken");
+		System.out.println("Screenshot Taken >> please check screenshot in project folder name >> ./screenshot >> in .png formet ");
 		 
 		 
 
