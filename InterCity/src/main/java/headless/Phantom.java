@@ -36,8 +36,13 @@ public class Phantom {
 		      name = Local.class.getEnclosingMethod().getName();
 			System.out.println("Entered in >>"+name);
 //			----------------------------------------------------------------------------------------------------------------
-			 File file = new File(phantomfilelocation);								
- 	        System.setProperty("phantomjs.binary.path", file.getAbsolutePath());		
+//			You can install phantom in system by below command:
+			/*	
+			 * brew tap homebrew/cask
+				brew cask install phantomjs
+				*/
+//			 File file = new File(phantomfilelocation);								
+// 	        System.setProperty("phantomjs.binary.path", file.getAbsolutePath());		
              WebDriver driver = new PhantomJSDriver();	
              driver.get("http://www.google.com");         
              WebElement element = driver.findElement(By.name("q"));	
