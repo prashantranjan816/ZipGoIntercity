@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-04-01T08:33:27Z" name="Suite" finished-at="2019-04-01T08:33:50Z" duration-ms="22779">
+  <suite started-at="2019-04-03T05:46:49Z" name="Suite" finished-at="2019-04-03T05:47:13Z" duration-ms="23795">
     <groups>
     </groups>
-    <test started-at="2019-04-01T08:33:27Z" name="Test" finished-at="2019-04-01T08:33:50Z" duration-ms="22779">
+    <test started-at="2019-04-03T05:46:49Z" name="Test" finished-at="2019-04-03T05:47:13Z" duration-ms="23795">
       <class name="Zipgo.InterCity.agents.InvitedAgents">
-        <test-method is-config="true" signature="loginIntercityDashboard()[pri:0, instance:Zipgo.InterCity.agents.InvitedAgents@13b13b5d]" started-at="2019-04-01T14:03:27Z" name="loginIntercityDashboard" finished-at="2019-04-01T14:03:38Z" duration-ms="10954" status="PASS">
+        <test-method is-config="true" signature="loginIntercityDashboard()[pri:0, instance:Zipgo.InterCity.agents.InvitedAgents@13b13b5d]" started-at="2019-04-03T11:16:49Z" name="loginIntercityDashboard" finished-at="2019-04-03T11:17:00Z" duration-ms="11326" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginIntercityDashboard -->
-        <test-method signature="InvitedAgentsList()[pri:1, instance:Zipgo.InterCity.agents.InvitedAgents@13b13b5d]" started-at="2019-04-01T14:03:38Z" name="InvitedAgentsList" finished-at="2019-04-01T14:03:50Z" duration-ms="11800" status="PASS">
+        <test-method signature="InvitedAgentsList()[pri:1, instance:Zipgo.InterCity.agents.InvitedAgents@13b13b5d]" started-at="2019-04-03T11:17:00Z" name="InvitedAgentsList" finished-at="2019-04-03T11:17:12Z" duration-ms="12433" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvitedAgentsList -->

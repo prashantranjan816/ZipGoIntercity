@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Zipgo.InterCity.agents.InvitedAgents"/>
+      <class name="headless.Phantom"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
