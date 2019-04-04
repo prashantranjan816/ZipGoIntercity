@@ -1,4 +1,4 @@
 InterCity/target/
 InterCity/screenshot/
 InterCity/test-output/
-InterCity/project.log
+InterCity/*.log
