@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class PakageStatusMail {
 	
-	@Test
+//	@Test
 	public PakageStatusMail() throws MalformedURLException, EmailException {
 		Mail.ReportEmail_Send.sendMail();
 	}
