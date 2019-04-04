@@ -85,7 +85,7 @@ public class LoginPage extends BasePage{
 		Utility.getScreenshot(driver, dateFinal + "firstScreenShot");
 
 	}
-//	@AfterClass()
+	@AfterClass()
 	public static void afterclass() throws MalformedURLException, EmailException {
 		Mail.ReportEmail_Send.sendMail();
 	}

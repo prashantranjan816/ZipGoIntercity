@@ -1,7 +1,5 @@
 package Zipgo.InterCity.agents;
 import java.io.IOException;
-
-import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import Zipgo.InterCity.LoginPage;
@@ -22,9 +20,8 @@ public class InvitedAgents extends LoginPage {
 	
 	
 	@Test(priority = 1, invocationCount = 1, enabled = true)
-	public void InvitedAgentsList() throws IOException, InterruptedException, EmailException {
-		Mail.ReportEmail_Send.sendMail();
-//		try {
+	public void InvitedAgentsList() throws IOException, InterruptedException {
+		try {
 			
 //			Bellow we are creating new anonymous inner class will be created during compile time & return us current method name.
 			class Local {};
@@ -44,7 +41,7 @@ Write code here..
 2
 
 */			
-		/*	
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			Utility.getScreenshot(driver, name + "_Fail_ScreenShot");
@@ -55,7 +52,7 @@ Write code here..
 		
 		finally {
 			closeBrowser();
-		}*/
+		}
 	
 	}
 
