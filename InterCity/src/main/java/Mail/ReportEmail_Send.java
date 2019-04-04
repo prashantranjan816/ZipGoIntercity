@@ -37,7 +37,7 @@ public class ReportEmail_Send {
 		int SmtpPort=465;
 		
 		String mailaddto1="prashant.ranjan@zipgo.in";
-		String mailaddto2="hashdeep@zipgo.in";
+		String mailaddto2="Harshdeep@zipgo.in";
 		String mailaddto3="sandesh@zipgo.in";
 		String mailaddto4="siddhartha@zipgo.in";
 		String mailaddto5="spooja.sharma@zipgo.in";
