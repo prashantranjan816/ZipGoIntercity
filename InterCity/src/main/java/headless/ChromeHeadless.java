@@ -1,5 +1,8 @@
 package headless;
 
+import java.net.MalformedURLException;
+
+import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +14,7 @@ public class ChromeHeadless {
 	
 	
 	@Test
-	public void chromeHeadlessTest() {
+	public void chromeHeadlessTest() throws MalformedURLException, EmailException {
 		
 //		Following chrome options are required for Chrome HeadLess Browser: 
 		ChromeOptions options = new ChromeOptions(); 
@@ -27,7 +30,7 @@ public class ChromeHeadless {
         System.out.println("#### Page title is: " + driver.getTitle());
         System.out.println("######################>>>   Badhae ho.. ChromeHeadless Headless testing is working  ###................");
         driver.quit();	
-
+        Mail.ReportEmail_Send.sendMail();
 		
 	}
 	
