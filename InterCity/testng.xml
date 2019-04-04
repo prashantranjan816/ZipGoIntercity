@@ -5,8 +5,8 @@
         <listener class-name="ExtendReport.ExtentReportListener"/>
     </listeners>
   <test thread-count="5" name="Test">
-    <classes>
-      <class name="headless.Phantom"/>
-    </classes>
+    <packages>
+      <package name="Zipgo.InterCity.agents"/>
+    </packages>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

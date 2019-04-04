@@ -16,6 +16,7 @@ import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import Zipgo.InterCity.base.BasePage;
@@ -58,7 +59,17 @@ public class LoginPage extends BasePage{
 		Properties pro = new Properties();
 		pro.load(fis);
 		System.out.println("Property class loaded");
-		driver = new ChromeDriver();
+		
+		//-----Below four line code for Chrome headless.
+		ChromeOptions options = new ChromeOptions(); 
+		options.addArguments("window-size=1400,800"); 
+		options.addArguments("headless");
+		
+		driver = new ChromeDriver(options);   // for launche headless chrome
+		
+//		driver = new ChromeDriver();    // for launch normal chrome(with GUI)
+		
+
 		driver.get(pro.getProperty(SelectURL));
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.findElement(Login).click();
@@ -74,7 +85,7 @@ public class LoginPage extends BasePage{
 		Utility.getScreenshot(driver, dateFinal + "firstScreenShot");
 
 	}
-	@AfterClass()
+//	@AfterClass()
 	public static void afterclass() throws MalformedURLException, EmailException {
 		Mail.ReportEmail_Send.sendMail();
 	}

@@ -40,7 +40,7 @@ public class ReportEmail_Send {
 		String mailaddto2="hashdeep@zipgo.in";
 		
 		
-
+/*
 		System.out.println("Sending attachement mail..");
 		
 		// Create the attachment
@@ -55,7 +55,7 @@ public class ReportEmail_Send {
 				attachment1.setDisposition(EmailAttachment.ATTACHMENT);
 				attachment1.setName(dateFinal+"SecondScreenShot1.png");
 		
-		
+		*/
 		
 		// Create the email message
 		MultiPartEmail email = new MultiPartEmail();
@@ -69,10 +69,11 @@ public class ReportEmail_Send {
 	
 		
 		email.addReplyTo(mailaddto1);
+		email.addReplyTo(mailaddto2);
 
-		email.setMsg("Please see the atached screenshot & Report to validate the test"
-				+ " You will get full extend report at location  >> "+ProjectReportPath);
-		//Attached the file
+		email.setMsg("Please see the atached screenshot & Report to your browser on ip http://13.233.139.207/#!"
+				+ " OR You will get full extend report at location  >> "+ProjectReportPath);
+		/*//Attached the file
 		try {
 			email.attach(attachment);
 			email.attach(attachment1);
@@ -80,7 +81,7 @@ public class ReportEmail_Send {
 			// TODO Auto-generated catch block
 			System.out.println("please checkattachement location");
 			e.printStackTrace();
-		}
+		}*/
 		// send the email
 		email.send();
 		System.out.println("Sent!");

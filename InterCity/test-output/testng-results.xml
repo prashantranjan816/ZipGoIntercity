@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-04-04T05:02:02Z" name="Suite" finished-at="2019-04-04T05:02:14Z" duration-ms="12420">
+  <suite started-at="2019-04-04T07:48:36Z" name="Suite" finished-at="2019-04-04T07:49:47Z" duration-ms="70996">
     <groups>
     </groups>
-    <test started-at="2019-04-04T05:02:02Z" name="Test" finished-at="2019-04-04T05:02:14Z" duration-ms="12420">
-      <class name="headless.Phantom">
-        <test-method signature="headlessSetup()[pri:0, instance:headless.Phantom@574b560f]" started-at="2019-04-04T10:32:02Z" name="headlessSetup" finished-at="2019-04-04T10:32:14Z" duration-ms="12366" status="PASS">
+    <test started-at="2019-04-04T07:48:36Z" name="Test" finished-at="2019-04-04T07:49:47Z" duration-ms="70996">
+      <class name="Zipgo.InterCity.agents.AgentsList">
+        <test-method is-config="true" signature="loginIntercityDashboard()[pri:0, instance:Zipgo.InterCity.agents.AgentsList@1eb5174b]" started-at="2019-04-04T13:18:36Z" name="loginIntercityDashboard" finished-at="2019-04-04T13:18:52Z" duration-ms="16491" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- headlessSetup -->
-      </class> <!-- headless.Phantom -->
+        </test-method> <!-- loginIntercityDashboard -->
+        <test-method signature="AgentsListmethod()[pri:1, instance:Zipgo.InterCity.agents.AgentsList@1eb5174b]" started-at="2019-04-04T13:18:52Z" name="AgentsListmethod" finished-at="2019-04-04T13:19:03Z" duration-ms="10587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AgentsListmethod -->
+      </class> <!-- Zipgo.InterCity.agents.AgentsList -->
+      <class name="Zipgo.InterCity.agents.CreateAgents">
+        <test-method is-config="true" signature="loginIntercityDashboard()[pri:0, instance:Zipgo.InterCity.agents.CreateAgents@72cde7cc]" started-at="2019-04-04T13:19:03Z" name="loginIntercityDashboard" finished-at="2019-04-04T13:19:14Z" duration-ms="11558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIntercityDashboard -->
+        <test-method signature="createAgents()[pri:1, instance:Zipgo.InterCity.agents.CreateAgents@72cde7cc]" started-at="2019-04-04T13:19:14Z" name="createAgents" finished-at="2019-04-04T13:19:24Z" duration-ms="9285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAgents -->
+      </class> <!-- Zipgo.InterCity.agents.CreateAgents -->
+      <class name="Zipgo.InterCity.agents.InvitedAgents">
+        <test-method is-config="true" signature="loginIntercityDashboard()[pri:0, instance:Zipgo.InterCity.agents.InvitedAgents@67080771]" started-at="2019-04-04T13:19:24Z" name="loginIntercityDashboard" finished-at="2019-04-04T13:19:37Z" duration-ms="12920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIntercityDashboard -->
+        <test-method signature="InvitedAgentsList()[pri:1, instance:Zipgo.InterCity.agents.InvitedAgents@67080771]" started-at="2019-04-04T13:19:37Z" name="InvitedAgentsList" finished-at="2019-04-04T13:19:47Z" duration-ms="10101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvitedAgentsList -->
+      </class> <!-- Zipgo.InterCity.agents.InvitedAgents -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
