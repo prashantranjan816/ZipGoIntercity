@@ -27,7 +27,7 @@ public class ReportEmail_Send {
 	int type;
 	static String ProjectReportPath		="./target/surefire-reports/ExtendReport/InterCityExtendReport.html";
 	
-	
+//	@Test
 	public static void sendMail() throws EmailException, MalformedURLException {
 		calender();
 		Day(full);
@@ -40,7 +40,7 @@ public class ReportEmail_Send {
 		String mailaddto2="Harshdeep@zipgo.in";
 		String mailaddto3="sandesh@zipgo.in";
 		String mailaddto4="siddhartha@zipgo.in";
-		String mailaddto5="spooja.sharma@zipgo.in";
+		String mailaddto5="pooja.sharma@zipgo.in";
 		
 		
 /*
@@ -70,13 +70,13 @@ public class ReportEmail_Send {
 		email.setSubject(mailSubject+" |[ "+dateFinal+"]:"+DayName+"http://13.233.139.207/#!");
 		email.addTo(mailaddto1);
 		email.addTo(mailaddto2);
-		email.addTo(mailaddto3);
+//		email.addTo(mailaddto3);
 		email.addTo(mailaddto4);
 		email.addTo(mailaddto5);
 	
 		
 		email.addReplyTo(mailaddto1);
-		email.addReplyTo(mailaddto2);
+		
 
 		email.setMsg("Please see the atached screenshot & Report to your browser on ip http://13.233.139.207/#!"
 				+ " OR You will get full extend report at location  >> "+ProjectReportPath);

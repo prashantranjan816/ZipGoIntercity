@@ -14,14 +14,15 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import Zipgo.InterCity.base.BasePage;
 
+import Mail.ReportEmail_Send;
+import Zipgo.InterCity.base.BasePage;
 import library.Utility;
+
+
 
 
 public class LoginPage extends BasePage{
@@ -85,9 +86,12 @@ public class LoginPage extends BasePage{
 		Utility.getScreenshot(driver, dateFinal + "firstScreenShot");
 
 	}
-	@AfterClass()
+	
+	
+	
+//	@AfterClass()
 	public static void afterclass() throws MalformedURLException, EmailException {
-		Mail.ReportEmail_Send.sendMail();
+		ReportEmail_Send.sendMail();
 	}
 
 	

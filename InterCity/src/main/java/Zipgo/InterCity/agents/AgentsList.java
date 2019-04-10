@@ -1,12 +1,16 @@
 package Zipgo.InterCity.agents;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import Zipgo.InterCity.LoginPage;
 import library.Utility;
+import utils.Excel;
+import utils.ExcelContext;
 
 public class AgentsList extends LoginPage {
 	
@@ -18,6 +22,7 @@ public class AgentsList extends LoginPage {
 	
 	
 	@Test(priority = 1, invocationCount = 1, enabled = true)
+//	Make sure method level argument should be same as no. of argument in Excel. [String username, String password, String isLoggedIn]
 	public void AgentsListmethod() throws IOException, InterruptedException {
 		try {
 			
@@ -30,6 +35,9 @@ public class AgentsList extends LoginPage {
 			driver.findElement(agents).click();
 			driver.findElement(AgentList).click();
 			Thread.sleep(3000);
+//			driver.findElement(search).sendKeys(username);
+//			driver.findElement(search).clear();
+//			driver.findElement(search).sendKeys(password);
 			driver.findElement(search).sendKeys(searchtaxt);
 			Utility.getScreenshot(driver, name + "_ScreenShot");
 /*			
@@ -52,6 +60,21 @@ Write code here..
 		}
 	
 	}
+	
+	
+//	Use DataProvider to get data from excel (Web1.xlsx) & user above by put dataProvider = "testData" in @Test.
+//	Excel is in location testData folder
+	
+	
+	 @DataProvider(name = "testData", parallel = false)
+	    public static Object[][] getTestData() throws IOException, URISyntaxException {
+	        ExcelContext context = new ExcelContext();
+	        context.setExcelFile("testData/Web.xlsx");
+	        context.setSheetName("login");
+	        Excel excelObj = new Excel(context);
+	        String[][] testData = excelObj.getData("username", "password", "isLoggedIn");
+	        return testData;
+	    }
 	
 	
 	
