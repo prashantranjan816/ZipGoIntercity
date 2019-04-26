@@ -1,10 +1,13 @@
 package Zipgo.InterCity.base;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
+//import java.util.function.Function;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
@@ -13,15 +16,16 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BasePage {
-
-   
-	protected WebDriver driver;
+	
+	protected String dateFinal;
+	protected static WebDriver driver;  // use protected so that call from all child class
+	;
 
 
     public void selectItemByValue(WebElement element, String itemToSelect) {
@@ -44,13 +48,6 @@ public class BasePage {
         }
     }
 
-   
-    public boolean hasNoElementAsExpected(By by) {
-        WebElement element;
-        element = new WebDriverWait(driver, 5).until(ExpectedConditions
-                .presenceOfElementLocated(by));
-        return element == null || !element.isDisplayed();
-    }
 
     public String getRandomString() {
         return RandomStringUtils.randomAlphabetic(5);
@@ -88,11 +85,7 @@ public class BasePage {
         }
     }
 
-    public boolean verifyElementSelected(WebElement element, boolean selected) {
-        return (new WebDriverWait(driver, 5)).until(ExpectedConditions
-                .elementSelectionStateToBe(element, selected));
-    }
-
+ 
 
     public void switchToFirstTab() {
         Set<String> handles = driver.getWindowHandles();
@@ -160,23 +153,44 @@ public class BasePage {
    	driver.switchTo().alert().accept();
    	
    }
-//   Customize sendkeys method 
-   public static void sendkey(WebDriver driver, WebElement element,int timeout,String value) {
-	   new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(element));
-	   element.sendKeys(value);
+   
+    
+   public void calender(int i) {
+	// --- ---- --- use Java calendar concept---------------------------
+			DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+			Date date = new Date();
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(date);
+			cal.add(Calendar.DATE, i);// insted of 0 we can use +-1 to increase or decrease current date.
+			dateFinal = df.format(cal.getTime());
+			System.out.println("Your used date is >>>"+dateFinal);
+	// ------------------------------------------------------------
    }
+   
+   public void browsweScreen() {
+	   driver.manage().window().maximize();
+   }
+   
+//   Customize sendkeys method 
+//   public static void sendkey(WebDriver driver, WebElement element,int timeout,String value) {
+//	   new WebDriverWait(driver,timeout).until(ExpectedConditions.visibilityOf(element));
+//	   element.sendKeys(value);
+//   }
    
 //   Customize Click method
-   public static void clickOn(WebDriver driver, WebElement element,int timeout) {
-	   new WebDriverWait(driver,timeout).until(ExpectedConditions.elementToBeClickable(element));
-	   element.click();
-   }
-   
+//   public static void clickOn(WebDriver driver, WebElement element,int timeout) {
+//	   new WebDriverWait(driver,timeout).until(ExpectedConditions.elementToBeClickable(element));
+//	   element.click();
+//   }
+//   
    
    
    public void closeBrowser() {
 	  
 	   driver.quit();
+	   System.out.println("Browser quit!!!");
    }
+   
+  
    
 }

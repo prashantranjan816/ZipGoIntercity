@@ -41,11 +41,11 @@ public class CreateBookings extends LoginPage {
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 			Utility.getScreenshot(driver, name + "_ScreenShot");
 			Thread.sleep(2000);
-			driver.findElement(fromCity).sendKeys(FROMECITY,Keys.ENTER);
+			driver.findElement(fromCity).sendKeys(FROMECITY,Keys.TAB);
 			Thread.sleep(3000);
 //			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 			
-			driver.findElement(toCity).sendKeys(TOCITY,Keys.ENTER);
+			driver.findElement(toCity).sendKeys(TOCITY,Keys.TAB);
 			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 			
 //			driver.findElement(booingAgent).sendKeys(BOOKINGAGENT,Keys.ENTER);

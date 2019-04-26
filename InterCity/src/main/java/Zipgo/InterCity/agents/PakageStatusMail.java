@@ -9,7 +9,7 @@ public class PakageStatusMail {
 	
 //	@Test
 	public PakageStatusMail() throws MalformedURLException, EmailException {
-		Mail.ReportEmail_Send.sendMail();
+		Mail.ReportEmail_Send.sendMail("prashant.ranjan@zipgo.in");
 	}
 	
 

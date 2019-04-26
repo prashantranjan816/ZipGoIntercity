@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        
   </properties>
 
   <dependencies>
@@ -85,8 +86,8 @@
 		<artifactId>maven-compiler-plugin</artifactId>
 		<version>3.8.0</version>
 			<configuration>
-				<source>${jdk.level}</source>
-				<target>${jdk.level}</target>
+				<source>12</source> <!--use current version of JAVA 12 insted of ${jdk.level}  -->
+				<target>12</target>
 			</configuration>
 	</plugin>
 	<plugin>
@@ -96,7 +97,7 @@
 			<configuration>
 				<suiteXmlFiles>
 				<!-- TestNG suite XML files -->
-					<suiteXmlFile>testng.xml</suiteXmlFile>
+					<suiteXmlFile>xpressPortalHappyFlow.xml</suiteXmlFile>
 				</suiteXmlFiles>
 				
 				

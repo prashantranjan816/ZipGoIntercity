@@ -57,7 +57,7 @@ public class Phantom  {
              driver.quit();	
              
 			
-             Mail.ReportEmail_Send.sendMail();
+             Mail.ReportEmail_Send.sendMail("prashant.ranjan@zipgo.in");
 		}
 		
 }

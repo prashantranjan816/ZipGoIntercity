@@ -30,7 +30,7 @@ public class ChromeHeadless {
         System.out.println("#### Page title is: " + driver.getTitle());
         System.out.println("######################>>>   Badhae ho.. ChromeHeadless Headless testing is working  ###................");
         driver.quit();	
-        Mail.ReportEmail_Send.sendMail();
+        Mail.ReportEmail_Send.sendMail("prashant.ranjan@zipgo.in");
 		
 	}
 	

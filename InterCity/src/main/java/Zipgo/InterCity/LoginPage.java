@@ -28,7 +28,7 @@ import library.Utility;
 public class LoginPage extends BasePage{
 	
 	final static String FileLocation 			= "./src/main/resources/intercityDashBoard.properties";
-	final static String ChromeFileLocation 		= "./src/main/resources/chromedriver 3";
+	final static String ChromeFileLocation 		= "./src/main/resources/chromedriver";
 	final static String SelectURL 				= "BetaUrl";
 	final static By Login 						= By.linkText("Login");
 	final static By email 			 			= By.xpath("//input[@type='email']");
@@ -69,6 +69,7 @@ public class LoginPage extends BasePage{
 		driver = new ChromeDriver(options);   // for launche headless chrome
 		
 //		driver = new ChromeDriver();    // for launch normal chrome(with GUI)
+//		---------------------------------------------------------------------------------
 		
 
 		driver.get(pro.getProperty(SelectURL));
@@ -91,7 +92,7 @@ public class LoginPage extends BasePage{
 	
 //	@AfterClass()
 	public static void afterclass() throws MalformedURLException, EmailException {
-		ReportEmail_Send.sendMail();
+		ReportEmail_Send.sendMail("prashant.ranjan@zipgo.in");
 	}
 
 	
